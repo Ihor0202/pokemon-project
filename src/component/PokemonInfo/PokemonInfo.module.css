@@ -1,0 +1,9 @@
+.boxImg > img {
+    height: 200px;
+}
+
+
+.boxInfo {
+    display: flex;
+    gap: 50px;
+}

@@ -1,0 +1,33 @@
+
+.pokemonPage {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pokemonPage__card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.pokemonPage__card:hover {
+    transform: translateY(-5px);
+}
+
+.pokemonPage__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.pokemonPage__image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
