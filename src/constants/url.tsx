@@ -8,11 +8,14 @@ export const urls = {
         // allPokemon: baseURL + 'pokemon',
         allPokemon: (offset:number): string => baseURL + 'pokemon?limit=20&offset=' + offset ,
         pokemonById: (id: number): string => baseURL + 'pokemon/' + id,
-        // search: BaseUrl + '/3/search/movie'
+        searchByAbility: (search: string): string => baseURL + 'ability/' + search,
+        pokemonForms: (id: number): string => baseURL + 'pokemon-form/'+ id
+    //     https://pokeapi.co/api/v2/pokemon-form/110/
+    //     /ability/levitate
     },
+
     imgUrl: {
         ImgById: (id: number): string => baseImgUrl + 'PokeAPI/sprites/master/sprites/pokemon/other/dream-world/' + id + '.svg',
-        // secondImgById: (id: string): string => baseImgUrl + 'PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + id + '.png'
     }
 }
 

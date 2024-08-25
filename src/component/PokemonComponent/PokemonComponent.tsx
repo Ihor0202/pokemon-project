@@ -7,6 +7,8 @@ import {Link} from "react-router-dom";
 
 type IProps = {
     pokemon: IPokemon[]
+    // urlId: string[]
+
 }
 const PokemonComponent:FC<IProps> = ({pokemon}) => {
 
@@ -24,7 +26,7 @@ const PokemonComponent:FC<IProps> = ({pokemon}) => {
 
                 return (
                     <div key={pok.url} className={styles.pokemonPage__card}>
-                        <Link to={pokemonId}> <img src={imgUrl} alt={pok.name} className={styles.pokemonPage__image}/>
+                        <Link to={'/pokemon/'+pokemonId}> <img src={imgUrl} alt={pok.name} className={styles.pokemonPage__image}/>
                             <p className={styles.pokemonPage__name}>{pok.name}</p></Link>
                     </div>
                 );

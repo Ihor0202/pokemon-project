@@ -6,7 +6,7 @@ import {useParams} from "react-router-dom";
 
 const PokemonByIdPage = () => {
     let {id} = useParams()
-    console.log(id)
+    // console.log(id)
 
     const dispatch = useAppDispatch();
     const { pokemon } = useAppSelector(state => state.pokemonInfoSlice);

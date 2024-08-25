@@ -15,21 +15,14 @@ const PokemonPage = () => {
     }, [dispatch, offset]);
     console.log(pokemon)
 
-    const handleNextPage = () => {
-            setOffset(prevPage => prevPage + 1);
 
-        // setOffset(prevPage => prevPage + 1);
-    };
-    const handlePrevPage = () => {
-        if (offset)  setOffset(prevPage => prevPage - 1);
-
-    };
     console.log(offset)
     return (
-        // <div className={styles.pokemonPage}>
         <div className={styles.pokemonContainer}>
 
-            <div><PokemonComponent pokemon={pokemon}/></div>
+            <div><PokemonComponent pokemon={pokemon}
+                                   // urlId={pokemon.map(pok => pok.url)}
+            /></div>
             <div className={styles.pagination}>
                 <button className={styles.btn}
                         disabled={offset < 20}
