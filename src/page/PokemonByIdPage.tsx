@@ -15,7 +15,7 @@ const PokemonByIdPage = () => {
         if (id) {
             dispatch(pokemonInfoActions.loadPokemonInfo(+id))
         }
-    }, [id]);
+    }, [id, dispatch]);
     return (
         <div>
             <PokemonInfoComponent pokemon={pokemon}/>

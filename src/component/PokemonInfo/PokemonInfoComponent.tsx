@@ -9,8 +9,6 @@ type IProps = {
 }
 const PokemonInfoComponent:FC<IProps> = ({pokemon}) => {
 
-    console.log(pokemon.forms)
-    // console.log(pokemon)
     const extractPokemonId = (url: string) => {
         const urlParts = url.split('/');
         return urlParts[urlParts.length - 2];
@@ -28,14 +26,10 @@ const PokemonInfoComponent:FC<IProps> = ({pokemon}) => {
             <div className={styles.boxInfo}>
                 <div>abilities: <ul>{pokemon.abilities?.map(abi => <li key={abi.ability.url}>{abi.ability.name}</li>)}</ul></div>
                 <div>stats: <ul>{pokemon.stats?.map(stat => <li key={stat.stat.url}>{stat.stat.name} {stat.base_stat}</li>)}</ul></div>
-                <div>types: <ul>{pokemon.types?.map(typ => <li key={typ.type.url}>type:{typ.type.name}</li>)}</ul></div>
+                <div>types: <ul>{pokemon.types?.map(typ => <li key={typ.type.url}>{typ.type.name}</li>)}</ul></div>
                 <div>Forms:
                     <ul>
-                        {/*{pokemon.forms?.map(form =>*/}
 
-                        {/*    <li key={form.url}>*/}
-                        {/*        <button><Link to={'/form/' +formId }>{form.name}</Link></button>*/}
-                        {/*    </li>)}*/}
                         {pokemon.forms?.map(form => {
                             const formId = extractPokemonId(form.url); // Витягуємо ID форми
 

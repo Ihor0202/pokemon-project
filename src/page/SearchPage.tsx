@@ -1,20 +1,22 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import SearchComponent from "../component/SearchComponent/SearchComponent";
 import {useAppDispatch, useAppSelector} from "../store/store";
 import {searchPokemonActions} from "../slice/searchPokemonSlice";
+import SearchForm from "../component/SearchComponent/SearchForm";
 
 const SearchPage = () => {
-
     const dispatch = useAppDispatch();
     const { searchPokemon } = useAppSelector(state => state.searchPokemonSlice);
-    // const [offset, setOffset] = useState<number>(0)
     console.log(searchPokemon)
-    useEffect(() => {
-        dispatch(searchPokemonActions.loadSearchPokemon('multitype'))
-    }, [dispatch]);
+
+
+    const handleSearch = (query: string) => {
+        dispatch(searchPokemonActions.loadSearchPokemon(query));
+    };
 
     return (
         <div>
+            <SearchForm onSearch={handleSearch}/>
             <SearchComponent searchPokemon={searchPokemon}/>
         </div>
     );

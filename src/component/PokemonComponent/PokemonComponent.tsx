@@ -21,7 +21,6 @@ const PokemonComponent:FC<IProps> = ({pokemon}) => {
         <div className={styles.pokemonPage}>
             {pokemon.map(pok => {
                 const pokemonId = extractPokemonId(pok.url);
-                // console.log(pokemonId)
                 const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
 
                 return (

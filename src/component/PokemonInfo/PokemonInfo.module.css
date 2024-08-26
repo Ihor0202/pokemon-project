@@ -1,5 +1,8 @@
 .boxImg > img {
     height: 200px;
+    background-color: #e5e5e5;
+    margin-left: 20px;
+    border-radius: 50%;
 }
 
 

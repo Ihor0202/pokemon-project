@@ -31,6 +31,9 @@ export const searchPokemonSlice = createSlice({
     extraReducers: builder =>
         builder.addCase(loadSearchPokemon.fulfilled, (state,action) => {
             state.searchPokemon = action.payload
+        }).addCase(loadSearchPokemon.rejected, (state) => {
+            // state.searchPokemon = action.payload
+            state.searchPokemon = []
         })
 
 })

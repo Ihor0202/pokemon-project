@@ -16,6 +16,7 @@
 
 .pokemonPage__card:hover {
     transform: translateY(-5px);
+    background-color: #dedeff;
 }
 
 .pokemonPage__name {
@@ -30,4 +31,5 @@
     height: 100px;
     object-fit: contain;
     margin-bottom: 10px;
+    background-color: #0000cb;
 }
